@@ -184,3 +184,20 @@ a:focus-visible {
         font-size: 16px;
     }
 }
+
+/* RED BACKGROUND PAGES (Home, Balance, Settings)
+   Add class="red-bg" to the <body> of any page that should use it. */
+
+.red-bg {
+    background: linear-gradient(180deg, #e8112d 0%, #b10e26 55%, #6e0a1a 100%);
+    background-attachment: fixed;
+}
+
+.red-bg .card {
+    border: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.red-bg .footer {
+    color: #ffffff;
+}
