@@ -1,0 +1,157 @@
+/* =========================================================
+   map.css  -  Map page only
+   Header, footer, and .card styles come from styles.css
+   ========================================================= */
+
+/* LAYOUT */
+
+.map-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.map-card-body {
+    padding: 16px;
+}
+
+/* "Find a dining location" dropdown */
+
+.search {
+    margin-bottom: 16px;
+}
+
+.search summary {
+    cursor: pointer;
+    padding: 10px 14px;
+    background-color: #f0f1f3;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.search ul {
+    list-style: none;
+    padding: 8px 14px;
+}
+
+.search a {
+    display: block;
+    padding: 6px 0;
+    color: #252a35;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.search a:hover {
+    color: #b10e26;
+}
+
+/* MAP IMAGE + PINS */
+
+.map-container {
+    position: relative;
+}
+
+.map-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.pin {
+    position: absolute;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* ---------------------------------------------------------
+   PIN POSITIONS
+   Paste the top/left rules for each pin from the old
+   map-style.css here, for example:
+
+   .chickfila { top: 40%; left: 30%; }
+   .pizza     { top: 45%; left: 35%; }
+   ...one rule for each: chickfila, pizza, starbucks, commons,
+   freshplate, market, thebreak, samsplace, einstein,
+   boarshead, fazolis, sneed
+   --------------------------------------------------------- */
+
+/* POPUPS (open when a link or pin points to their id) */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 360px);
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    z-index: 20;
+}
+
+.popup:target {
+    display: block;
+}
+
+.popup h2 {
+    background-color: #ae1026;
+    color: white;
+    padding: 14px 20px;
+    font-size: 19px;
+}
+
+.popup p {
+    padding: 12px 20px 0;
+    font-size: 15px;
+}
+
+.popup a {
+    display: inline-block;
+    margin: 18px 20px 20px;
+    color: #ae1026;
+    font-weight: bold;
+}
+
+/* DINING LOCATIONS LIST */
+
+.dining-note {
+    padding: 14px 24px 6px;
+    font-size: 14px;
+    color: #626975;
+}
+
+.dining-list {
+    list-style: none;
+}
+
+.dining-list a {
+    display: block;
+    padding: 14px 24px;
+    color: #252a35;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.dining-list li:last-child a {
+    border-bottom: none;
+}
+
+.dining-list a:hover {
+    color: #b10e26;
+    background-color: #fff0f1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .map-grid {
+        grid-template-columns: 1fr;
+    }
+}

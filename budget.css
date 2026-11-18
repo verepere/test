@@ -1,0 +1,229 @@
+/* =========================================================
+   budget.css  -  Budget page only
+   Header, footer, and .card styles come from styles.css
+   ========================================================= */
+
+/* GRID LAYOUT */
+
+.top-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 15px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.date {
+    font-size: 12px;
+    border: 1px solid #d66a78;
+    border-radius: 6px;
+    padding: 7px 12px;
+}
+
+/* WEEKLY BUDGET */
+
+.weekly-budget {
+    min-height: 370px;
+}
+
+.table-container {
+    padding: 12px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 12px;
+}
+
+th,
+td {
+    border: 1px solid #e3e3e3;
+    text-align: center;
+    height: 55px;
+    padding: 8px;
+}
+
+thead th {
+    background-color: #f0f1f3;
+    height: 40px;
+}
+
+thead th:first-child {
+    width: 110px;
+}
+
+tbody th {
+    text-align: left;
+    padding-left: 15px;
+    background-color: white;
+}
+
+.total {
+    background-color: #f9e9ed;
+}
+
+.extra th,
+.extra td {
+    background-color: #fff0f1;
+}
+
+/* SPENDING BREAKDOWN */
+
+.breakdown {
+    min-height: 220px;
+}
+
+.chart-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.pie-chart {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    background: conic-gradient(
+        #ffd166 0% 50%,
+        #1767ad 50% 70%,
+        #be1830 70% 100%
+    );
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 12px;
+}
+
+.legend p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.yellow {
+    background-color: #ffd166;
+}
+
+.blue {
+    background-color: #1767ad;
+}
+
+.red {
+    background-color: #be1830;
+}
+
+/* WEEKLY SPENDING */
+
+.spending {
+    flex: 1;
+}
+
+.spending-body {
+    padding: 15px 20px;
+}
+
+.spending-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 13px;
+    background-color: #e1e4e8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 55%;
+    height: 100%;
+    background-color: #bd142d;
+    border-radius: 20px;
+}
+
+.spending-body p {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #626975;
+}
+
+/* SPENDING SUMMARY */
+
+.summary {
+    margin-top: 14px;
+}
+
+.summary-body {
+    padding: 8px 25px 12px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 26px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .top-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .right-column {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-content {
+        flex-wrap: wrap;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    .date {
+        font-size: 10px;
+    }
+}

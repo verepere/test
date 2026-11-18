@@ -1,0 +1,186 @@
+/* =========================================================
+   styles.css  -  shared by EVERY page
+   Base, header, nav, footer, and card styles (from budget.css)
+   Page-specific rules live in each page's own CSS file.
+   ========================================================= */
+
+/* GENERAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #252a35;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.header {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.raider {
+    color: #d71920;
+}
+
+.bucks {
+    color: #182333;
+}
+
+.header nav {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    margin-left: auto;      /* pushes the links to the right, next to the profile icon */
+    margin-right: 40px;     /* space between the links and the profile icon */
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #303746;
+    font-size: 14px;
+    padding: 15px 8px;
+    border-bottom: 3px solid transparent;
+}
+
+.header nav a:hover,
+.header nav a.active {
+    color: #b10e26;
+    border-bottom: 3px solid #b10e26;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+}
+
+.profile a {
+    text-decoration: none;
+}
+
+/* profile picture (image version) */
+.profile-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+/* CARDS */
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ececec;
+}
+
+.card-header {
+    background-color: #ae1026;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header h1,
+.card-header h2 {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #69707b;
+    font-size: 12px;
+}
+
+/* Keyboard focus (accessibility) */
+
+a:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 3px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .card-header h1,
+    .card-header h2 {
+        font-size: 16px;
+    }
+}

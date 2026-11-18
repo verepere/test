@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Raider Bucks$ - Map</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="raider">RAIDER</span>
+            <span class="bucks">BUCKS$</span>
+            <img src="images/image.png" alt="Raider Bucks Logo" width="60">
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="balance.html">Balance</a>
+
+            <a href="budget.html">Budget</a>
+
+            <a href="map-page.html"
+               class="active"
+               aria-current="page">Map</a>
+
+        </nav>
+
+        <div class="profile">
+            <a href="settings.html"
+               aria-label="Profile and settings">
+                <svg class="profile-img" viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="20" fill="#172033"/>
+                    <circle cx="20" cy="15" r="6.5" fill="#fff"/>
+                    <path d="M8 33c1.5-7 6-10 12-10s10.5 3 12 10A19 19 0 0 1 8 33z" fill="#fff"/>
+                </svg>
+            </a>
+            <span>EN/PT</span>
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <div class="map-grid">
+
+            <!-- MAP -->
+            <section class="card" id="map-area" aria-labelledby="map-title">
+
+                <div class="card-header">
+                    <h1 id="map-title">Campus Dining Map</h1>
+                </div>
+
+                <div class="map-card-body">
+
+                    <details class="search">
+                        <summary>Find a dining location</summary>
+                        <ul>
+                            <li><a href="#chickfila">Chick-fil-A</a></li>
+                            <li><a href="#pizza">Pizza Hut</a></li>
+                            <li><a href="#starbucks">Starbucks</a></li>
+                            <li><a href="#commons">The Commons</a></li>
+                            <li><a href="#freshplate">Fresh Plate</a></li>
+                            <li><a href="#market">The Market</a></li>
+                            <li><a href="#thesamsplace">The samsplace</a></li>
+                            <li><a href="#samsplace">Sam's Place</a></li>
+                            <li><a href="#einstein">Einstein Bros. Bagels</a></li>
+                            <li><a href="#boarshead">Boar's Head Deli</a></li>
+                            <li><a href="#fazolis">Fazoli's</a></li>
+                            <li><a href="#sneed">23 at Sneed</a></li>
+                        </ul>
+                    </details>
+
+                    <div class="map-container">
+
+                        <img src="images/campus-map.png"
+                             alt="Texas Tech University campus dining map">
+
+                        <a href="#chickfila" class="pin chickfila" aria-label="Chick-fil-A on the map">📍</a>
+                        <a href="#pizza" class="pin pizza" aria-label="Pizza Hut on the map">📍</a>
+                        <a href="#starbucks" class="pin starbucks" aria-label="Starbucks on the map">📍</a>
+                        <a href="#commons" class="pin commons" aria-label="The Commons on the map">📍</a>
+                        <a href="#freshplate" class="pin freshplate" aria-label="Fresh Plate on the map">📍</a>
+                        <a href="#market" class="pin market" aria-label="The Market on the map">📍</a>
+                        <a href="#thesamsplace" class="pin thebreak" aria-label="The samsplace on the map">📍</a>
+                        <a href="#samsplace" class="pin samsplace" aria-label="Sam's Place on the map">📍</a>
+                        <a href="#einstein" class="pin einstein" aria-label="Einstein Bros. Bagels on the map">📍</a>
+                        <a href="#boarshead" class="pin boarshead" aria-label="Boar's Head Deli on the map">📍</a>
+                        <a href="#fazolis" class="pin fazolis" aria-label="Fazoli's on the map">📍</a>
+                        <a href="#sneed" class="pin sneed" aria-label="23 at Sneed on the map">📍</a>
+
+                        <!-- POPUPS (shown when their link or pin is clicked) -->
+
+                        <div id="chickfila" class="popup" role="dialog" aria-labelledby="chickfila-title">
+                            <h2 id="chickfila-title">Chick-fil-A</h2>
+                            <p>Hours: 10:00am - 9:00pm</p>
+                            <p>Location: Student Union Building</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="pizza" class="popup" role="dialog" aria-labelledby="pizza-title">
+                            <h2 id="pizza-title">Pizza Hut</h2>
+                            <p>Hours: 10:00am - 3:00pm</p>
+                            <p>Location: Student Union Building</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="starbucks" class="popup" role="dialog" aria-labelledby="starbucks-title">
+                            <h2 id="starbucks-title">Starbucks</h2>
+                            <p>Hours: 7:00am - 10:00pm</p>
+                            <p>Location: Student Union Building</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="commons" class="popup" role="dialog" aria-labelledby="commons-title">
+                            <h2 id="commons-title">The Commons</h2>
+                            <p>Hours: 8:00am - 5:00pm</p>
+                            <p>Location: Talkington Hall</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="freshplate" class="popup" role="dialog" aria-labelledby="freshplate-title">
+                            <h2 id="freshplate-title">Fresh Plate</h2>
+                            <p>Hours: 8:00am - 5:00pm</p>
+                            <p>Location: Wall Gates</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="market" class="popup" role="dialog" aria-labelledby="market-title">
+                            <h2 id="market-title">The Market</h2>
+                            <p>Mon-Thu: 7am - 11pm</p>
+                            <p>Location: Stangel/Murdough Hall</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="thesamsplace" class="popup" role="dialog" aria-labelledby="thesamsplace-title">
+                            <h2 id="thesamsplace-title">The samsplace</h2>
+                            <p>Mon-Thu: 8am - 5pm</p>
+                            <p>Location: library</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="samsplace" class="popup" role="dialog" aria-labelledby="samsplace-title">
+                            <h2 id="samsplace-title">Sam's Place</h2>
+                            <p>Mon-Thu: 8am - 9pm</p>
+                            <p>Location: Student Union Building</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="einstein" class="popup" role="dialog" aria-labelledby="einstein-title">
+                            <h2 id="einstein-title">Einstein Bros. Bagels</h2>
+                            <p>Mon-Thu: 7am - 3pm</p>
+                            <p>Location: Talkington Hall</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="boarshead" class="popup" role="dialog" aria-labelledby="boarshead-title">
+                            <h2 id="boarshead-title">Boar's Head Deli</h2>
+                            <p>Mon-Thu: 10am - 3pm</p>
+                            <p>Location: Student Union Building</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="fazolis" class="popup" role="dialog" aria-labelledby="fazolis-title">
+                            <h2 id="fazolis-title">Fazoli's</h2>
+                            <p>Mon-Thu: 11am - 9pm</p>
+                            <p>Location: Stangel/Murdough Hall</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                        <div id="sneed" class="popup" role="dialog" aria-labelledby="sneed-title">
+                            <h2 id="sneed-title">23 at Sneed</h2>
+                            <p>Mon-Thu: 7am - 9pm</p>
+                            <p>Location: Sneed Hall</p>
+                            <a href="#map-area">Close</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- DINING LOCATIONS LIST -->
+            <section class="card dining" aria-labelledby="dining-heading">
+
+                <div class="card-header">
+                    <h2 id="dining-heading">Dining locations</h2>
+                </div>
+
+                <p class="dining-note">Select a dining location for more information.</p>
+
+                <ul class="dining-list">
+                    <li><a href="#chickfila">Chick-fil-A</a></li>
+                    <li><a href="#pizza">Pizza Hut</a></li>
+                    <li><a href="#starbucks">Starbucks</a></li>
+                    <li><a href="#commons">The Commons</a></li>
+                    <li><a href="#freshplate">Fresh Plate</a></li>
+                    <li><a href="#market">The Market</a></li>
+                    <li><a href="#thesamsplace">The samsplace</a></li>
+                    <li><a href="#samsplace">Sam's Place</a></li>
+                    <li><a href="#einstein">Einstein Bros. Bagels</a></li>
+                    <li><a href="#boarshead">Boar's Head Deli</a></li>
+                    <li><a href="#fazolis">Fazoli's</a></li>
+                    <li><a href="#sneed">23 at Sneed</a></li>
+                </ul>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Raider Bucks$</p>
+    </footer>
+
+</body>
+</html>

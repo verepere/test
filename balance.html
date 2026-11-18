@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Raider Bucks$ - Balance</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="balance.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="raider">RAIDER</span>
+            <span class="bucks">BUCKS$</span>
+            <img src="images/image.png" alt="Raider Bucks Logo" width="60">
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="balance.html"
+               class="active"
+               aria-current="page">Balance</a>
+
+            <a href="budget.html">Budget</a>
+
+            <a href="map-page.html">Map</a>
+
+        </nav>
+
+        <div class="profile">
+            <a href="settings.html"
+               aria-label="Profile and settings">
+                <svg class="profile-img" viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="20" fill="#172033"/>
+                    <circle cx="20" cy="15" r="6.5" fill="#fff"/>
+                    <path d="M8 33c1.5-7 6-10 12-10s10.5 3 12 10A19 19 0 0 1 8 33z" fill="#fff"/>
+                </svg>
+            </a>
+            <span>EN/PT</span>
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container balance-main">
+
+        <h1 class="visually-hidden">Balance</h1>
+
+        <div class="balance-grid">
+
+            <!-- LEFT SIDE -->
+            <div class="balance-left">
+
+                <section class="card" aria-labelledby="balance-heading">
+                    <div class="card-header">
+                        <h2 id="balance-heading">Current Balance</h2>
+                    </div>
+                    <p class="balance-amount">$902.11</p>
+                </section>
+
+                <section class="card" aria-labelledby="plan-heading">
+                    <div class="card-header">
+                        <h2 id="plan-heading">Dining Plan</h2>
+                    </div>
+                    <p class="balance-amount">Matador: $1,500</p>
+                </section>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <section class="card transactions" aria-labelledby="transactions-heading">
+
+                <div class="card-header">
+                    <h2 id="transactions-heading">Previous Transactions</h2>
+                </div>
+
+                <ul class="transaction-list">
+                    <li>
+                        <span class="transaction-merchant">Pizza Hut</span>
+                        <time class="transaction-date" datetime="2026-09-25">Sep 25, 2026</time>
+                        <span class="transaction-amount">-$9.02</span>
+                    </li>
+                    <li>
+                        <span class="transaction-merchant">Chick-fil-A</span>
+                        <time class="transaction-date" datetime="2026-09-25">Sep 25, 2026</time>
+                        <span class="transaction-amount">-$11.12</span>
+                    </li>
+                    <li>
+                        <span class="transaction-merchant">Sams</span>
+                        <time class="transaction-date" datetime="2026-09-24">Sep 24, 2026</time>
+                        <span class="transaction-amount">-$11.00</span>
+                    </li>
+                    <li>
+                        <span class="transaction-merchant">Fazolis</span>
+                        <time class="transaction-date" datetime="2026-09-23">Sep 23, 2026</time>
+                        <span class="transaction-amount">-$9.42</span>
+                    </li>
+                </ul>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Raider Bucks$</p>
+    </footer>
+
+</body>
+</html>

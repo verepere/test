@@ -1,0 +1,94 @@
+/* =========================================================
+   balance.css  -  Balance page only
+   Header, footer, and .card styles come from styles.css
+   ========================================================= */
+
+/* main fills the space between header and footer */
+.balance-main {
+    display: flex;
+}
+
+.balance-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+}
+
+.balance-grid .card-header {
+    padding: 16px 24px;
+}
+
+.balance-grid .card-header h2 {
+    font-size: 24px;
+}
+
+/* LEFT: balance + dining plan cards */
+
+.balance-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.balance-left .card {
+    flex: 1;
+}
+
+.balance-amount {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 62px);   /* card height minus the title strip */
+    padding: 32px 24px;
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: bold;
+    color: #252a35;
+}
+
+/* RIGHT: transactions card */
+
+.transaction-list {
+    list-style: none;
+}
+
+.transaction-list li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "merchant amount"
+        "date     amount";
+    align-items: center;
+    gap: 6px 12px;
+    padding: 28px 24px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.transaction-list li:last-child {
+    border-bottom: none;
+}
+
+.transaction-merchant {
+    grid-area: merchant;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.transaction-date {
+    grid-area: date;
+    font-size: 15px;
+    color: #626975;
+}
+
+.transaction-amount {
+    grid-area: amount;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .balance-grid {
+        grid-template-columns: 1fr;
+    }
+}

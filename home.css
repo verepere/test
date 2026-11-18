@@ -1,0 +1,89 @@
+/* =========================================================
+   home.css  -  Home page only
+   Header, footer, and .card styles come from styles.css
+   ========================================================= */
+
+/* main fills the space between header and footer */
+.home-main {
+    display: flex;
+}
+
+.home-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.home-grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-grid .card-header {
+    padding: 16px 24px;
+}
+
+.home-grid .card-header h2 {
+    font-size: 24px;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 24px;
+}
+
+/* greeting card */
+.avatar {
+    width: clamp(90px, 12vw, 150px);
+    height: clamp(90px, 12vw, 150px);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: bold;
+}
+
+/* budget + balance cards */
+.big-amount {
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: bold;
+    color: #252a35;
+}
+
+/* map card */
+.button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #ae1026;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #8f0b21;
+}
+
+.pinpoint {
+    width: clamp(50px, 7vw, 90px);
+    height: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Raider Bucks$ - Settings</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="raider">RAIDER</span>
+            <span class="bucks">BUCKS$</span>
+            <img src="images/image.png" alt="Raider Bucks Logo" width="60">
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="balance.html">Balance</a>
+
+            <a href="budget.html">Budget</a>
+
+            <a href="map-page.html">Map</a>
+
+        </nav>
+
+        <div class="profile">
+            <a href="settings.html"
+               aria-label="Profile and settings"
+               aria-current="page">
+                <svg class="profile-img" viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="20" fill="#172033"/>
+                    <circle cx="20" cy="15" r="6.5" fill="#fff"/>
+                    <path d="M8 33c1.5-7 6-10 12-10s10.5 3 12 10A19 19 0 0 1 8 33z" fill="#fff"/>
+                </svg>
+            </a>
+            <span>EN/PT</span>
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container settings-main">
+
+        <!-- USER BANNER -->
+        <section class="card settings-banner" aria-labelledby="welcome-heading">
+            <svg class="settings-avatar" viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#172033"/>
+                <circle cx="20" cy="15" r="6.5" fill="#fff"/>
+                <path d="M8 33c1.5-7 6-10 12-10s10.5 3 12 10A19 19 0 0 1 8 33z" fill="#fff"/>
+            </svg>
+            <h1 id="welcome-heading">Welcome,<br>[Username]</h1>
+        </section>
+
+        <!-- THREE SETTINGS CARDS -->
+        <div class="settings-grid">
+
+            <!-- MEAL PLAN SETTINGS -->
+            <section class="card" aria-labelledby="meal-heading">
+
+                <div class="card-header">
+                    <h2 id="meal-heading">Meal Plan Settings</h2>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="form-row">
+                        <label for="meal-plan">Meal Plan:</label>
+                        <select id="meal-plan" name="meal-plan"><option value="">Select</option></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="add-bucks">Add Bucks:</label>
+                        <select id="add-bucks" name="add-bucks"><option value="">Select</option></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="subtract-bucks">Subtract Bucks:</label>
+                        <select id="subtract-bucks" name="subtract-bucks"><option value="">Select</option></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="spending-limit">Spending Limit:</label>
+                        <select id="spending-limit" name="spending-limit"><option value="">Select</option></select>
+                    </div>
+
+                    <div class="form-row indented">
+                        <label for="day-week">Day/Week:</label>
+                        <select id="day-week" name="day-week"><option value="">Select</option></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="purchase-stopping">Purchase Stopping:</label>
+                        <select id="purchase-stopping" name="purchase-stopping"><option value="">Select</option></select>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- NOTIFICATION SETTINGS -->
+            <section class="card" aria-labelledby="notify-heading">
+
+                <div class="card-header">
+                    <h2 id="notify-heading">Notification Settings</h2>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="form-row">
+                        <label for="balance-reminder">Balance Reminder:</label>
+                        <select id="balance-reminder" name="balance-reminder"><option value="">Select</option></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="over-balance">Over-Balance warn:</label>
+                        <select id="over-balance" name="over-balance"><option value="">Select</option></select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="purchase-notifications">Purchase Notifications:</label>
+                        <select id="purchase-notifications" name="purchase-notifications"><option value="">Select</option></select>
+                    </div>
+
+                    <fieldset>
+                        <legend>Where to send Notifications?</legend>
+
+                        <div class="form-row">
+                            <label for="notify-raider-email">Raider Email:</label>
+                            <select id="notify-raider-email" name="notify-raider-email"><option value="">Select</option></select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="notify-personal-email">Personal Email:</label>
+                            <select id="notify-personal-email" name="notify-personal-email"><option value="">Select</option></select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="notify-text">Text:</label>
+                            <select id="notify-text" name="notify-text"><option value="">Select</option></select>
+                        </div>
+                    </fieldset>
+
+                </div>
+
+            </section>
+
+            <!-- ACCOUNT SETTINGS -->
+            <section class="card" aria-labelledby="account-heading">
+
+                <div class="card-header">
+                    <h2 id="account-heading">Account Settings</h2>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="form-row">
+                        <label for="raider-email">Set Raider Email:</label>
+                        <input type="email" id="raider-email" name="raider-email" autocomplete="email">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="personal-email">Set Personal Email:</label>
+                        <input type="email" id="personal-email" name="personal-email" autocomplete="email">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="phone">Set Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="r-number">Set R-Number:</label>
+                        <input type="text" id="r-number" name="r-number">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="dorm">Set Dorm:</label>
+                        <select id="dorm" name="dorm"><option value="">Select</option></select>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Raider Bucks$</p>
+    </footer>
+
+</body>
+</html>

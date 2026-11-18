@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Raider Bucks$ - Budget</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="budget.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="raider">RAIDER</span>
+            <span class="bucks">BUCKS$</span>
+            <img src="images/image.png" alt="Raider Bucks Logo" width="60">
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="balance.html">Balance</a>
+
+            <a href="budget.html"
+               class="active"
+               aria-current="page">Budget</a>
+
+            <a href="map-page.html">Map</a>
+
+        </nav>
+
+        <div class="profile">
+            <a href="settings.html"
+               aria-label="Profile and settings">
+                <svg class="profile-img" viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="20" fill="#172033"/>
+                    <circle cx="20" cy="15" r="6.5" fill="#fff"/>
+                    <path d="M8 33c1.5-7 6-10 12-10s10.5 3 12 10A19 19 0 0 1 8 33z" fill="#fff"/>
+                </svg>
+            </a>
+            <span>EN/PT</span>
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <div class="top-grid">
+
+            <!-- WEEKLY BUDGET -->
+            <section class="card weekly-budget">
+
+                <div class="card-header">
+                    <h1>Weekly Budget</h1>
+                    <span class="date">
+                        Oct 5 – Oct 11, 2026
+                    </span>
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">MON</th>
+                                <th scope="col">TUE</th>
+                                <th scope="col">WED</th>
+                                <th scope="col">THU</th>
+                                <th scope="col">FRI</th>
+                                <th scope="col">SAT</th>
+                                <th scope="col">SUN</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <th scope="row">Breakfast</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="total"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Lunch</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="total"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Dinner</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="total"></td>
+                            </tr>
+
+                            <tr class="extra">
+                                <th scope="row">
+                                    Extra<br>Spendings
+                                </th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="total"></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- RIGHT SIDE -->
+            <div class="right-column">
+
+                <!-- SPENDING BREAKDOWN -->
+                <section class="card breakdown">
+
+                    <div class="card-header">
+                        <h2>Spending Breakdown</h2>
+                    </div>
+
+                    <div class="chart-content">
+
+                        <div class="pie-chart"
+                             role="img"
+                             aria-label="Dining 50 percent, Groceries 20 percent, Other 30 percent">
+                        </div>
+
+                        <div class="legend">
+
+                            <p>
+                                <span class="dot yellow"></span>
+                                Dining 50%
+                            </p>
+
+                            <p>
+                                <span class="dot blue"></span>
+                                Groceries 20%
+                            </p>
+
+                            <p>
+                                <span class="dot red"></span>
+                                Other 30%
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- WEEKLY SPENDING -->
+                <section class="card spending">
+
+                    <div class="card-header">
+                        <h2>Weekly Spending</h2>
+                    </div>
+
+                    <div class="spending-body">
+
+                        <div class="spending-values">
+                            <span>$X spent of $X</span>
+                            <span>$X remaining</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <p>X% of weekly budget used</p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <!-- SPENDING SUMMARY -->
+        <section class="card summary">
+
+            <div class="card-header">
+                <h2>Spending Summary</h2>
+            </div>
+
+            <div class="summary-body">
+
+                <div class="summary-row">
+                    <span>Spending per meal</span>
+                    <strong>$XXXX</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Spending per day</span>
+                    <strong>$XXXX</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Spending per week</span>
+                    <strong>$XXXX</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Spending per month</span>
+                    <strong>$XXXX</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Spending per semester</span>
+                    <strong>$XXXX</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Raider Bucks$</p>
+    </footer>
+
+</body>
+</html>

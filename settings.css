@@ -1,0 +1,140 @@
+/* =========================================================
+   settings.css  -  Settings page only
+   Header, footer, and .card styles come from styles.css
+   ========================================================= */
+
+/* main stacks the banner and the three cards, filling the page */
+.settings-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* USER BANNER */
+
+.settings-banner {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 20px 32px;
+    border-top: 6px solid #ae1026;
+}
+
+.settings-avatar {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.settings-banner h1 {
+    font-size: clamp(26px, 3.5vw, 40px);
+    line-height: 1.2;
+}
+
+/* THREE-CARD GRID */
+
+.settings-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.settings-grid .card-header {
+    padding: 16px 24px;
+}
+
+.settings-grid .card-header h2 {
+    font-size: 22px;
+}
+
+.card-body {
+    padding: 8px 24px 20px;
+}
+
+/* FORM ROWS */
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.form-row label {
+    font-size: 15px;
+}
+
+.form-row select,
+.form-row input {
+    width: 50%;
+    min-width: 120px;
+    padding: 8px 10px;
+    font: inherit;
+    font-size: 14px;
+    color: #252a35;
+    background-color: white;
+    border: 1px solid #c9ccd2;
+    border-radius: 6px;
+}
+
+.form-row select:focus-visible,
+.form-row input:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+/* "Day/Week" belongs under Spending Limit */
+.indented {
+    padding-left: 24px;
+}
+
+/* "Where to send Notifications?" group */
+fieldset {
+    border: none;
+    margin-top: 10px;
+}
+
+legend {
+    padding: 14px 0 4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+fieldset .form-row {
+    padding-left: 24px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .settings-banner {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .settings-avatar {
+        width: 64px;
+        height: 64px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .form-row select,
+    .form-row input {
+        width: 100%;
+    }
+}
